@@ -16,9 +16,10 @@ jobs:
       - name: "Sync security alerts to Jira issues"
         uses: reload/github-security-jira@v1.x
         env:
+          GITHUB_REPOSITORY: RedGraz/code-scanning-javascript-demo
           GH_SECURITY_TOKEN: ${{ secrets.GitHubSecurityToken }}
           JIRA_TOKEN: ${{ secrets.JiraApiToken }}
-          JIRA_HOST: https://swyftx.atlassian.net/jira
+          JIRA_HOST: https://swyftx.atlassian.net
           JIRA_USER: alfred.gradzevicius@swyftx.com.au
           JIRA_PROJECT: VM
           JIRA_ISSUE_TYPE: Dependency Vulnerability
