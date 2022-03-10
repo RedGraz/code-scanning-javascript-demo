@@ -1,0 +1,25 @@
+name: GitHub Security Alerts for Jira
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ main ]
+  schedule:
+    - cron: '0 */6 * * *'
+
+jobs:
+  syncSecurityAlerts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Sync security alerts to Jira issues"
+        uses: reload/github-security-jira@v1.x
+        env:
+          GH_SECURITY_TOKEN: ${{ secrets.GitHubSecurityToken }}
+          JIRA_TOKEN: ${{ secrets.JiraApiToken }}
+          JIRA_HOST: https://swyftx.atlassian.net/
+          JIRA_USER: alfred.gradzevicius@swyftx.com.au
+          JIRA_PROJECT: VM
+          JIRA_ISSUE_TYPE: Vulnerability
+          JIRA_WATCHERS: alfred.gradzevicius@swyftx.com.au
