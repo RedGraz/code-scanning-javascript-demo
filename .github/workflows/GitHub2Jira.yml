@@ -18,7 +18,7 @@ jobs:
         env:
           GH_SECURITY_TOKEN: ${{ secrets.GitHubSecurityToken }}
           JIRA_TOKEN: ${{ secrets.JiraApiToken }}
-          JIRA_HOST: https://swyftx.atlassian.net/
+          JIRA_HOST: https://swyftx.atlassian.net/jira
           JIRA_USER: alfred.gradzevicius@swyftx.com.au
           JIRA_PROJECT: VM
           JIRA_ISSUE_TYPE: Dependency Vulnerability
