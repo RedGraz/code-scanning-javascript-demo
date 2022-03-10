@@ -7,7 +7,7 @@
     "mkdirp": "^0.5.1",
     "pump": "^1.0.0",
     "tar-stream": "^1.1.2",
-    "plist": "3.0.1"
+    "jquery": "2.1.4"
   },
   "keywords": [
     "tar",
